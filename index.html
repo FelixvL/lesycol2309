@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function wegaanbeginnen(){
+            fetch("http://127.0.0.1:5000/vakantie")
+            .then(response => response.text())
+            .then( data => onzefunctie(data))
+        }
+        function onzefunctie(dedata){
+            document.getElementById("resultaat").innerHTML = dedata;
+        }
+    </script>
 </head>
 <body>
     Hoi we zijn gestart
+    <button onclick="wegaanbeginnen()">klik hier</button>
+    <div id="resultaat">abc</div>
 </body>
 </html>
